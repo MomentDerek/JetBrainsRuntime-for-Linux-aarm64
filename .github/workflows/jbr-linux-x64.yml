@@ -85,7 +85,7 @@ jobs:
             curl -O https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-3_all.deb
             apt-get install -y ./zulu-repo_1.0.0-3_all.deb
             apt-get update -y
-            apt-get install -y zulu17-jdk
+            apt-get install -y zulu18-jdk
             apt-get clean -y
             aria2c -o jbrsdk_jcef.tgz 'https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-${{ steps.vars.outputs.JBSDK_VERSION }}-linux-aarch64-b${{ steps.vars.outputs.build_number }}.tar.gz'
             mkdir jcef_linux_aarch64
@@ -96,7 +96,7 @@ jobs:
 
             patch -p1 < ../idea.patch
             
-            export BOOT_JDK="/usr/lib/jvm/zulu17-ca-arm64"
+            export BOOT_JDK="/usr/lib/jvm/zulu18-ca-arm64"
 
             mv ../jcef_linux_aarch64 ./
 
