@@ -75,7 +75,7 @@ jobs:
       with:
         cpu: cortex-a7
         cpu_info: cpuinfo/raspberrypi_4b
-        base_image: https://raspi.debian.net/tested/20220808_raspi_4_bookworm.img.xz
+        base_image: raspi_4_bullseye:20220121
         image_additional_mb: 10240
         commands: |
             apt-get update -y --allow-releaseinfo-change
