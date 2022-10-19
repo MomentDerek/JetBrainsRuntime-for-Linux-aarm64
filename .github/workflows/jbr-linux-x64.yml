@@ -98,8 +98,6 @@ jobs:
 
             mv ../jcef_linux_aarch64 ./
 
-            export BOOT_JDK="$JAVA_HOME_17_aarch64"
-
             jb/project/tools/linux/scripts/mkimages_aarch64.sh '${{ steps.vars.outputs.build_number }}' jcef
 
             echo ::set-output name=jbr_image::"$(ls -1 jbr_jcef-*-linux-aarch64-*.tar.gz)"
