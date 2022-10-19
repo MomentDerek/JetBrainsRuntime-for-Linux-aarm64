@@ -96,7 +96,7 @@ jobs:
 
             patch -p1 < ../idea.patch
             
-            export BOOT_JDK="$JAVA_HOME"
+            export BOOT_JDK="/usr/lib/jvm/zulu17-ca-arm64"
 
             mv ../jcef_linux_aarch64 ./
 
