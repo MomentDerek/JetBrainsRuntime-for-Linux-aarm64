@@ -95,6 +95,8 @@ jobs:
             git log -1
 
             patch -p1 < ../idea.patch
+            
+            export BOOT_JDK="$JAVA_HOME"
 
             mv ../jcef_linux_aarch64 ./
 
